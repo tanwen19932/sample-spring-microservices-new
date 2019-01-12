@@ -1,5 +1,5 @@
 server:
-  port: 8060
+  port: 8062
 
 eureka:
   client:
@@ -15,7 +15,8 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true
+#          enabled: true
+          lower-case-service-id: true
       routes:
       - id: employee-service
         uri: lb://employee-service
